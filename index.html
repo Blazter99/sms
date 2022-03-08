@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <link rel="stylesheet" href="./style.css">
     <meta charset="UTF-8">
@@ -7,11 +8,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
-    
 
+<body>
+    <div id="topbox">
+        <h1>Recievers name<br><span>↓</span></h1><h1>Senders name<br><span>↓</span></h1><h1>Message<br><span>↓</span></h1><h1 id="blue">hejsanssssssss</h1>
+    </div>
+    <div id="input">
+    <input type="text" id="toName" placeholder="Enter to name">
+    <input type="text" id="fromName" placeholder="Enter from name">
+    <input type="text" id="msg" placeholder="Enter your message">
+    <button onclick='sendMail()'>Send Email</button>
+    </div>
+    <div id="bottombox"></div>
 
 
     <script src="main.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("N7tECQYOhsVirA2Gl");
+        })();
+    </script>
 </body>
+
 </html>
